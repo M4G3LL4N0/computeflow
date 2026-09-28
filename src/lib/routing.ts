@@ -175,22 +175,23 @@ export function routeWorkload(input: WorkloadInput): RoutingReport {
   // Split: top 3, weighted by fit, normalized to 100.
   const top = scored.slice(0, 3);
   const fitSum = top.reduce((s, o) => s + o.scores.fit, 0) || 1;
-  const split = top.map((o, i) => ({
-    ...o,
-    allocation:
+  const split = top.map((o, i) => {
+    const allocation =
       i === top.length - 1
         ? 100 -
           top
             .slice(0, -1)
             .reduce((s, x) => s + Math.round((x.scores.fit / fitSum) * 100), 0)
-        : Math.round((o.scores.fit / fitSum) * 100),
-  }));
+        : Math.round((o.scores.fit / fitSum) * 100);
+    return {
+      ...o,
+      allocation,
+      estimatedMonthlyCost: Math.round(o.pool.hourlyRate * 720 * (allocation / 100)),
+    };
+  });
 
   const recommended = split[0];
-  const totalEstimatedCost = split.reduce(
-    (s, o) => s + Math.round((o.estimatedMonthlyCost * o.allocation) / 100),
-    0,
-  );
+  const totalEstimatedCost = split.reduce((s, o) => s + o.estimatedMonthlyCost, 0);
 
   const explanation = buildExplanation(input, recommended, split);
   const whyThisRouteWon = buildWhyWon(input, recommended);
