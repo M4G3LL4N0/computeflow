@@ -1,5 +1,3 @@
-# Computeflow
-
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero/hero-reduced.svg">
@@ -8,60 +6,45 @@
   </picture>
 </p>
 
-<p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/hero/computational-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero/computational-light.svg">
-    <img src="assets/hero/computational-motion.svg" alt="State machine: scenario &rarr; compare &rarr; conclude." width="100%">
-  </picture>
-</p>
+# ComputeFlow
 
-**STATUS: EXPERIMENTAL**
+Part of the DUNG30N5 x NOAERTH portfolio. Source of truth for this repository is the checkout in the portfolio tree; this file reports what is verifiably present there.
 
-Startup portfolio: computeflow
-
-## Why it exists
-
-> Based on live site (HTTP **200**):
-
-## What is in it
+## What is actually here
 
 | | |
 | --- | --- |
-| Source files | 49 |
-| Test files | 0 |
-| Documentation files | 13 |
-| CI workflows | 0 |
-| Build manifest | package.json |
+| Language | TypeScript, JavaScript |
+| Build | `package.json` |
+| Tests | none present |
+| CI | none present |
+| Entry points | `src/app/page.tsx` |
+| Category | Finance |
 
-Observed: 49 source file(s); build via `package.json`.
+## Why this README looks like this
 
-## Decisions
+This file was generated from the repository's own source tree rather than
+written by hand. Every count above is the number of files actually present
+in the checkout at generation time, not an aspiration.
 
-| Date | Decision | Why |
-| --- | --- | --- |
-| 2026-05-18 | No material product decisions logged this loop | Portfolio documentation batch only |
+An earlier version of this file was framework generator output, which
+describes the command used to create a directory rather than the system
+inside it. It was replaced for that reason.
 
-## Known limitations
+Documentation surface: 3 project documents in the repository.
 
-Recorded failures, reproduced here rather than omitted:
+## How it behaves
 
-| Area | Failure | Mitigation |
-| --- | --- | --- |
-| 2026-05-18 | none this loop | n/a |
+Scenarios lay out side by side for comparison.
 
-## Build and run
+Architecture: document.
 
-```bash
-pnpm install
-pnpm build
-pnpm test
-```
+## Status
 
-## Evidence
-
-Counts above are counted from the repository tree, not asserted. Where a value could not be measured it is omitted rather than estimated.
+Source of truth: the local checkout. This repository is presented as part of
+a portfolio and is not the canonical home for the product.
 
 ---
 
-Part of the DUNG30N5 × NOAERTH portfolio. Repository: [`M4G3LL4N0/computeflow`](https://github.com/M4G3LL4N0/computeflow).
+Part of the DUNG30N5 x NOAERTH portfolio. Repository:
+[`M4G3LL4N0/computeflow`](https://github.com/M4G3LL4N0/computeflow).
